@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Postagem de Receitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous">
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    <div class="d-flex justify-content-center mt-3">
+      <div class="card w-50">
+        <div class="card-header">Nova Receita</div>
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+              <label for="titulo">Título da receita:</label>
+              <input type="text" id="titulo" class="form-control" name="titulo" required>
+              <label for="Ingredientes">Ingredientes</label>
+              <textarea type="text" class="form-control" name="ingredientes"required></textarea>
+              <label for="preparo">Modo de preparo:</label>
+              <textarea type="text"
+                        class="form-control"
+                        rows="5"
+                        cols="35"
+                        name="modoPreparo"
+                        required></textarea>
+              <label>Essa receita é típica de alguma região?</label>
+              <br/>
+              <input type="radio" name="regiao" value="CO">
+              Centroeste
+              <br/>
+              <input type="radio" name="regiao" value="NE">
+              Nordeste
+              <br/>
+              <input type="radio" name="regiao" value="NO">
+              Norte
+              <br/>
+              <input type="radio" name="regiao" value="SU">
+              Sul
+              <br/>
+              <input type="radio" name="regiao" value="SE">
+              Sudeste
+              <br/>
+              <div class="d-flex flex-row-reverse bd-highlight">
+                <button type="submit" class="btn btn-dark">Publicar</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>

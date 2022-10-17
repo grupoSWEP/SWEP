@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous">
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    <div class="d-flex justify-content-center mt-3">
+      <div class="card w-50">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputUsername" class="form-label">Username</label>
+              <input type="text"
+                     name="username"
+                     class="form-control"
+                     aria-describedby="usernameHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Senha</label>
+              <input type="password"
+                     name="password"
+                     class="form-control"
+                     id="exampleInputPassword1">
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+              <button type="submit" class="btn btn-dark">Logar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      {% if messages %}
+        {% for message in messages %}
+          {% if message.tags %}<script>alert("{{ message }}")</script>{% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </body>
+</html>

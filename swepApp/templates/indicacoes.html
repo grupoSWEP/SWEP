@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html Lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indicações Nutricionais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous">
+  </head>
+  <fieldset>
+    <body class="bg">
+      {% include "navbar.html" %}
+      <div class="d-flex justify-content-center mt-3">
+        <div class="card w-50">
+          <div class="card-header">Indicações Nutricionais</div>
+          <div class="card-body">
+            <form action="{% url 'indicacoesNutricionais' %}" method="POST">
+              {% csrf_token %}
+              <main class = "Indicações Nutricionais">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Qual o tipo de informação?</label>
+                    <input type="text"
+                           name="tipo"
+                           class="form-control"
+                           placeholder="Ex: Alimento, receita, dica...">
+                  </div>
+                  <label for="exampleInputEmail1" class="form-label">Digite as informações que deseja compartilhar</label>
+                  <div class="mb-3">
+                    <input type="text"
+                           name="description2"
+                           class="form-control"
+                           placeholder="Digite aqui...">
+                    <style>
+                    input[type=text] {
+                    height: 50px;
+                    width: 500px
+                    }
+                    </style>
+                  </div>
+                </form>
+                <section style="text-align:center">
+                  <input type="submit" value="Enviar" class="enviar">
+                </section>
+              </main>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</fieldset>
+</html>

@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html Lang="en">
+
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+        html {
+            width: 100%;
+        }
+
+        header {
+            background:rgba(204, 204, 204, 0.8);
+            box-sizing: border-box;
+            font-family: 'Dosis', sans-serif;
+            border: 5px solid rgba(204, 204, 204, 0.8);
+            text-align: justify;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 12vh;
+            text-transform: uppercase;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline;
+            letter-spacing: 5px;
+        }
+
+        h1 {
+            display: left;
+            font-size: 40px;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .cabecalho {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Dosis', sans-serif;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            background-image: url(ORFF0J1.jpg);
+            opacity: 1.5;
+            backdrop-filter: blur 30px;
+            background-repeat: no-repeat;
+            background-size: 2200px 1200px;
+            background-attachment: scroll;
+            background-position: center center;
+            font-size: 20px;
+            font-weight:bold;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu_comidas {
+            width: 400px;
+            margin: 50px auto;
+            clear: both;
+            display: block;
+            color:rgba(11, 248, 11, 0.973);
+            padding: 0px 0px;
+            background-color: rgba(3, 3, 3, 0.719);
+            border-radius: 8px;
+        }
+
+        .menu_comidas:checked{
+            color: rgb(197, 9, 9);
+        }
+
+
+        .menu_comidas .menu_check {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 0px;
+        }
+
+        .checkbox-label {
+            transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3 ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+
+        }
+        .enviar {
+            background: #060707;
+            color: rgb(243, 233, 233);
+            border: 1px solid rgb(7, 7, 7);
+            border-radius: 20px;
+            justify-content: center;
+            box-shadow: 15px 15px 15px rgb(153, 150, 150);
+            text-shadow: none;
+            }
+
+        .enviar:hover {
+            background: #128b12;
+            color: #fff;
+            border: 1px solid rgba(29, 146, 25, 0.801);
+            border-radius: 20px;
+            justify-content: center;
+            box-shadow: 15px 15px 15px #bcc2bc;
+            text-shadow: none;
+            }
+
+        footer {
+            height: 12vh;
+            background: rgba(204, 204, 204, 0.8);
+            background-position: center center;
+            color:rgba(7, 6, 6, 0.432);
+            font-family: 'Dosis', sans-serif;
+            font-size: 13px;
+            text-align: justify;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 120%;
+        }
+      
+      </style>
+
+        </head>
+
+         <body class="bg">
+          <fieldset>
+
+            <header>
+
+              <section class="logo">
+                <div>
+                <h1><b> <a href ='/'> SWEP </a> </b></h1>
+                </section>
+                     <ul>
+                      <li class="menu"><a href="#">Comidas Típicas |</a></li>
+                      <li class="menu"><a href="#"> <a href ='/'> Indicações Nutricionais | </a></a></li>
+                      <li class="menu"><a href="#">Valor Nutricional |</a></li>
+                      <li class="menu"><a href="#">Mais Informações</a></li>
+                     </ul>
+                </div>
+              
+              </header>
+
+          <form action="" method="get">
+            
+            <main class = "menu_comidas">
+
+              <section class="cabecalho">
+                <p><br><br>Selecione o(s) alimento(s) que você possui na sua dispensa, seja ele um alimento típico da sua região ou não: <br></p>
+              </section>
+
+              <section class = "menu_check">
+                <label for = "peixe">
+                <input type="checkbox" id="1" name="alimento" value="peixe" class = "checkbox-label">
+                Peixe </label>
+                </section>
+            
+              <section class = "menu_check">
+                <label for="farinha">
+                <input type="checkbox" id="2" name="alimento" value="farinha" class = "checkbox-label">
+                Farinha</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="açai">
+                <input type="checkbox" id="3" name="alimento" value="açaí" class = "checkbox-label">
+                Açaí</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="arroz">
+                <input type="checkbox" id="4" name="alimento" value="arroz" class = "checkbox-label">
+                Arroz</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="tucupi">
+                <input type="checkbox" id="5" name="alimento" value="tucupi" class = "checkbox-label">
+                Tucupi</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="Feijão">
+                <input type="checkbox" id="6" name="alimento" value="feijão" class = "checkbox-label">
+                Feijão</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="batata_doce">
+                <input type="checkbox" id="7" name="alimento" value="batata_doce" class = "checkbox-label">
+                Batata Doce</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="cafe">
+                <input type="checkbox" id="8" name="alimento" value="cafe" class = "checkbox-label">
+                Café</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="manteiga">
+                <input type="checkbox" id="9" name="alimento" value="manteiga" class = "checkbox-label">
+                Manteiga</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="macaxeira">
+                <input type="checkbox" id="10" name="alimento" value="macaxeira" class = "checkbox-label">
+                Macaxeira</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="hortalicas">
+                <input type="checkbox" id="11" name="alimento" value="hortalicas" class = "checkbox-label">
+                Hortaliças</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="inhame">
+                <input type="checkbox" id="12" name="alimento" value="inhame" class = "checkbox-label">
+                Inhame</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="frutas">
+                <input type="checkbox" id="13" name="alimento" value="frutas" class = "checkbox-label">
+                Frutas</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="farinha_de_mandioca">
+                <input type="checkbox" id="14" name="alimento" value="farinha_de_mandioca" class = "checkbox-label">
+                Farinha de Mandioca</label>
+              </section>
+ 
+              <section class = "menu_check">
+                <label for="carne_moida">
+                <input type="checkbox" id="15" name="alimento" value="carne_moida" class = "checkbox-label">
+                Carne Moída</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="acucar">
+                <input type="checkbox" id="16" name="alimento" value="acucar" class = "checkbox-label">
+                Açúcar</label>
+              </section>
+
+              <section class = "menu_check">
+                <label for="queijo">
+                <input type="checkbox" id="17" name="alimento" value="queijo" class = "checkbox-label">
+                Queijo</label>
+              </section>
+            
+              <section class = "menu_check">
+                <label for="ovo">
+                <input type="checkbox" id="18" name="alimento" value="ovo" class = "checkbox-label">
+                Ovo<br></label>
+              </section>
+
+              <section style="text-align:center">
+                <input type="submit" value="Enviar" class="enviar">
+              </section>
+
+            </main>
+
+            </form> 
+            <footer>
+              <p2><br> Copyright SWEP - 2022 <br></p2>
+            </footer>
+
+          </fieldset>
+            
+         </body>
+        
+</html>
