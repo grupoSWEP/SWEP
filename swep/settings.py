@@ -26,7 +26,7 @@ SECRET_KEY = '$l3rqj$o132eb6truddviu$$%-(nhjl9f2okn@yn+xhs0$1hg='
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'swe-p.herokuapp.com',
+    'swepapp.herokuapp.com',
     '127.0.0.1',
 ]
 
