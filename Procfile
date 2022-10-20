@@ -1,1 +1,1 @@
-web: gunicorn swepapp.wsgi --log-file 
+web: gunicorn swepapp.wsgi
