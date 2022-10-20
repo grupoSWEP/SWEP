@@ -8,27 +8,26 @@
           rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
           crossorigin="anonymous">
-
     <style>
       
-
       ul.lista {
         margin:160px;
         padding: 160px;
         align-items: center;
-        display: flex;
+        margin: 20px 20px 20px 20px;
       }
 
       ul.lista li {
         align-items: center;
         list-style:none;
         display: flex;
-        margin: 80px;
+        margin: 50px;
+        justify-content: center;
+        margin-right: 65px;
       }
 
       button {
         min-width: 130px;
-        position: relative;
         display: inline-block;
         text-align: center;
         text-transform: uppercase; 
@@ -50,18 +49,20 @@
         transition: 0.5s;
       }
 
-
     </style>
   </head>
 
   <body>
+    <div>
+
     {% include "navbar.html" %}
-    
+
     <ul class = "lista">
     <li><a href='login/'><button>Login</button></a></li>
-    <li><a href='/'><button>Login como Nutricionista</button></a></li>
-    <li><a href='register/'><button>Cadastro</button></a></li>
+    <li><a href='nutritionist_register/'><button>Cadastro</button></a></li>
     </ul>
 
   </body>
+</div>
+
 </html>
