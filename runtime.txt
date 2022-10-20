@@ -1,2 +1,0 @@
-cat runtime.txt
-Python-3.10.8
