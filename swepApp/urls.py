@@ -6,6 +6,7 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView, name='index'),
+    path('cadastro/', CadastroView, name='indexcadastro'),
     path('register/', RegisterView, name='register'),
     path('indicacoesNutricionais/', IndicacoesView, name='indicacoesNutricionais'),
     path('login/', LoginView, name='login'),
