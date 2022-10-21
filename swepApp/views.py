@@ -8,6 +8,9 @@ from django.contrib.auth.decorators import login_required
 def IndexView(request):
     return render(request, 'landing.html')
 
+def CadastroView(request):
+    return render(request, 'landingCad.html')
+
 def RegisterView(request):
     if request.method == 'GET':
         form  = RegisterForm()
