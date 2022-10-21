@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SWEP - Escolha o tipo de Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous">
+    <style>
+      
+      ul.lista {
+        margin:160px;
+        padding: 160px;
+        align-items: center;
+        margin: 20px 20px 20px 20px;
+      }
+
+      ul.lista li {
+        align-items: center;
+        list-style:none;
+        display: flex;
+        margin: 50px;
+        justify-content: center;
+        margin-right: 65px;
+      }
+
+      button {
+        min-width: 130px;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase; 
+        padding: 15px;
+        margin: 30px 25px;
+        font-size: 40px;
+        font-weight: 600;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;	
+
+        color:rgb(236, 240, 243);
+
+        border-radius: 30px;
+        border: 2px solid rgb(56, 53, 53);
+        box-shadow: 5px 5px 5px rgb(80, 79, 82);
+        background-color: rgb(54, 53, 54);
+        transition: 0.5s;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div>
+
+    {% include "navbar.html" %}
+
+    <ul class = "lista">
+    <li><a href='register/'><button>Cadastro do Usuário</button></a></li>
+    <li><a href='nutritionist_register/'><button>Cadastro do Nutricionista</button></a></li>
+    </ul>
+    
+  </body>
+</div>
+</html>
