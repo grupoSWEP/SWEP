@@ -14,4 +14,5 @@ urlpatterns = [
     path('logout/', LogoutView, name='logout'),
     path('newRecipe/', NewRecipeView, name='novaReceita'),
     path('recipe/<int:id>/', ShowRecipeView, name='Receita'),
+    path('feed/', FeedView, name='feed'),
 ]

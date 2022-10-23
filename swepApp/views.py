@@ -20,6 +20,9 @@ def IndexView(request):
 def CadastroView(request):
     return render(request, 'landingCad.html')
 
+def FeedView(request):
+    return render(request, 'feed.html')
+
 def RegisterView(request):
     if request.method == 'GET':
         form  = RegisterForm()
@@ -82,7 +85,7 @@ def IndicacoesView(request):
             form.save()
             description2 = form.cleaned_data.get('description2')
             messages.success(request, 'Indicação nutricional postada')
-            return redirect('index')
+            return redirect('feed')
         else:
             print('Form is not valid')
             messages.error(request, 'Error Processing Your Request')
@@ -105,7 +108,7 @@ def NewRecipeView(request):
         if form.is_valid():
             form.instance.author=request.user
             form.save()
-            return redirect('index')
+            return redirect('feed')
         else:
             print('Form is not valid')
             messages.error(request, 'Error Processing Your Request')
@@ -128,7 +131,7 @@ def LoginView(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('index')
+            return redirect('feed')
         else:
             print('Form is not valid')
             messages.error(request, 'Error Processing Your Request')

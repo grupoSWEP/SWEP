@@ -24,11 +24,11 @@ class Recipe(models.Model):
     ingredientes = models.CharField(max_length=500)
     modoPreparo = models.TextField()
     author = models.ForeignKey(UserSwep, on_delete=models.CASCADE)
-    Norte = 'NO'
-    Nordeste = 'NE'
-    CentroOeste = 'CO'
-    Sul = 'SU'
-    Sudeste = 'SE'
+    Norte = 'Norte'
+    Nordeste = 'Nordeste'
+    CentroOeste = 'Centro-Oeste'
+    Sul = 'Sul'
+    Sudeste = 'Sudeste'
     regiaoEnum = [
         (Norte, 'Norte'),
         (Nordeste, 'Nordeste'),
@@ -37,7 +37,7 @@ class Recipe(models.Model):
         (Sudeste, 'Sudeste'),
     ]
     regiao = models.CharField(
-        max_length=2,
+        max_length=15,
         choices= regiaoEnum, 
         null=True)
 
