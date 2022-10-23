@@ -1,10 +1,19 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import RegisterForm, IndicacoesForm, LoginForm, NewRecipeForm
+from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 # Create your views here. - Criar as Views de cada página.
+
+def nutriOnly(function):
+    def wrapper(request):
+        if request.user.is_authenticated:
+            a = Nutritionist.objects.get(id = request.user.id)
+            if a!=None:
+                return function(request)
+    return wrapper
+
 def IndexView(request):
     return render(request, 'landing.html')
 
@@ -34,6 +43,30 @@ def RegisterView(request):
     
     return render(request, 'register.html', {})
 
+def NutriRegisterView(request):
+    if request.method == 'GET':
+        form  = NutriRegisterForm()
+        context = {'form': form}
+        return render(request, 'nutriRegister.html', context)
+    
+    if request.method == 'POST':
+        form  = NutriRegisterForm(request.POST)
+        
+        if form.is_valid():
+            form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account was created for ' + user)
+            return redirect('index')
+        else:
+            print('Form is not valid')
+            messages.error(request, 'Error Processing Your Request')
+            context = {'form': form}
+            
+        return render(request, 'nutriRegister.html', context)
+    
+    return render(request, 'nutriRegister.html', {})
+
+@nutriOnly
 @login_required
 def IndicacoesView(request):
     if request.method == 'GET':
@@ -108,3 +141,8 @@ def LoginView(request):
 def LogoutView(request):
     logout(request)
     return redirect('index')
+
+def ShowRecipeView(request, id):
+    recipe = Recipe.objects.get(id=id)
+    context = { 'recipe':recipe }
+    return render(request, 'showRecipe.html', context)

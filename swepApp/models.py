@@ -3,9 +3,21 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
-class UserSwep(AbstractUser):
-    idade = models.IntegerField(null=True, blank=True)
+class Alimentos(models.Model):
+    nome = models.CharField(max_length=50)
+    valorNutri = models.CharField(max_length=50)
 
+class UserSwep(AbstractUser):
+    pass
+
+class Despensa(models.Model):
+    alimentos = models.ManyToManyField(Alimentos)
+
+class RegularUser(UserSwep):
+    despensa = models.OneToOneField(Despensa, on_delete=models.CASCADE, null=True)
+
+class Nutritionist(UserSwep):
+    crn = models.CharField(max_length=50)
 
 class Recipe(models.Model):
     titulo = models.CharField(max_length=50)
