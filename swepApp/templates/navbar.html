@@ -22,6 +22,9 @@
               <a class="nav-link" href="/newRecipe/">Nova receita</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/indicacoesNutricionais/">Indicações Nutricionais</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/alimentos/">Alimentos</a>
             </li>
           {% else %}
@@ -38,11 +41,6 @@
           {% if request.user.is_staff %}
             <li class="nav-item">
               <a class="nav-link" href="/admin/">Admin</a>
-            </li>
-          {% endif %}
-          {% if request.user.is_nutritionist %}
-            <li class="nav-item">
-              <a class="nav-link" href="/indicacoesNutricionais/">Indicações Nutricionais</a>
             </li>
           {% endif %}
         </div>
