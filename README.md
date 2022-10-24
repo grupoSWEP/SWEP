@@ -46,7 +46,7 @@ $ python3 manage.py runserver
 ### **Accessing the Project**
 
 Access it in following link:
-http://localhost:8000/
+https://swepapp.herokuapp.com/
 
 ## Status do projeto
 Protótipo lofi aprovado com 7 histórias e a criação de uma 8ª e em andamento para deploy!
