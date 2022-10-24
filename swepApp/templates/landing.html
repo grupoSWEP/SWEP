@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    {%if request.user.is_authenticated %}
+    {%block 'content' %}
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SWEP - Página Inicial</title>
@@ -51,18 +54,23 @@
 
     </style>
   </head>
-
+  
+  
   <body>
     <div>
 
-    {% include "navbar.html" %}
-
-    <ul class = "lista">
-    <li><a href='login/'><button>Login</button></a></li>
-    <li><a href='cadastro/'><button>Cadastro</button></a></li>
-    </ul>
-
+    {% include 'navbar.html' %}
+   
+    {% endblock %}
+    {% else %}
+      <ul class = "lista">
+        
+            <li><a href='login/'><button>Login</button></a></li>
+            <li><a href='cadastro/'><button>Cadastro</button></a></li>
+            </ul>
+    {% endif %}  
   </body>
+  
 </div>
 
 </html>
