@@ -22,16 +22,24 @@
             <a class="nav-link" href="/newRecipe/">Nova receita</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/indicacoesNutricionais/">Indicações Nutricionais</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/alimentos/">Alimentos</a>
-          </li>
+            <a class="nav-link" href="/indicacoesNutricionais/">Nova indicação nutricional</a>
+          
         {% else %}
           <li class="nav-item">
             <a class="nav-link" href="/login/">Login</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cadastro/">Cadastro</a>
+          </li>
         {% endif %}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/alimentos/">Alimentos</a>
+      </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/feed/">Feed de publicações</a>
+    </li>
         {% if request.user.is_staff %}
         <li class="nav-item">
           <a class="nav-link" href="/admin/">Admin</a>
