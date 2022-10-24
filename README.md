@@ -64,7 +64,7 @@ O projeto será acessível através de uma plataforma que, sem necessidade de ca
 Por intermédio do nosso projeto os usuários terão ajuda no seu dia-a-dia ao passo que ele visa promover uma alimentação saudável com receitas de baixo custo mas sempre promovendo um alto valor nutricional. Dessa forma, nosso projeto estimula um consumo balanceado mesmo com recursos limitados, ajudando, assim, pessoas em vulnerabilidade social. Com isso, os usuários terão uma melhora na sua pobreza nutricional.
 
 ## Quem mantém e contribui com o projeto?
-O projeto a princípio será mantido pela equipe em colaboração com uma profissional da área de nutrição, responsável pela indicação de receitas com maior equilíbrio nutricional. No decorrer do desenvolvimento, a colaboração será ampliada para receber contribuições de outros nutricionistas e também dos usuários que terão espaço para inserir suas próprias dicas de receitas, com a devida divisão entre receitas de profissionais e de usuários. No desenvolvimento da aplicação estão as estudantes de Ciência da Computação da CESAR School Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos e Nathália Accioly.
+O projeto a princípio será mantido pela equipe em colaboração com uma profissional da área de nutrição, responsável pela indicação de receitas com maior equilíbrio nutricional. No decorrer do desenvolvimento, a colaboração será ampliada para receber contribuições de outros nutricionistas e também dos usuários que terão espaço para inserir suas próprias dicas de receitas, com a devida divisão entre receitas de profissionais e de usuários. No desenvolvimento da aplicação estão as estudantes de Ciência da Computação da CESAR School Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, Rodrigo Cavalcanti e Nathália Accioly.
 
 # ENG version 
 
@@ -93,4 +93,4 @@ Through our project, users will get help in their daily lives as it aims to prom
 
 At first, the project will be maintained by the team in collaboration with a professional nutritionist, responsible for indicating recipes with better nutritional balance. As the project develops, the collaboration will be expanded to receive contributions from other nutritionists and also from users, who will have space to insert their own recipe tips, with the proper division between professional and user recipes.
 
-CESAR School Computer Science students Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, and Nathália Accioly are developing the application.
+CESAR School Computer Science students Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, Rodrigo Cavalcanti and Nathália Accioly are developing the application.
