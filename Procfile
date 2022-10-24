@@ -1,2 +1,2 @@
-web: gunicorn swepApp.wsgi:application --log-file - --log-level debug
+web: gunicorn swep.wsgi:application --log-file - --log-level debug
 
