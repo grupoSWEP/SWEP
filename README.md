@@ -12,7 +12,7 @@ the SWEP application and it's aim to FDS subject.
 
 ### **Clone Project**
 ```
-$ git clone https://github.com/levasl/SWEP.git && cd SWEP
+$ git clone https://github.com/grupoSWEP/SWEP.git && cd SWEP
 ```
 
 ### **Prepare Enviroment**
