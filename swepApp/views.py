@@ -3,6 +3,8 @@ from django.contrib import messages
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+
 
 # Create your views here. - Criar as Views de cada página.
 
@@ -149,3 +151,18 @@ def ShowRecipeView(request, id):
     recipe = Recipe.objects.get(id=id)
     context = { 'recipe':recipe }
     return render(request, 'showRecipe.html', context)
+@csrf_exempt
+def AlimentosView(request):
+    if request.method=='POST':
+        alim=request.POST.getlist('alimentos')
+        Alimentos.objects.create(alimentos=alim)
+        return redirect('index')
+    return render (request, 'food.html')
+        
+
+def FeedView(request):
+    posts = Recipe.objects.all().order_by('-id')
+    return render(request, 'feed.html',  {'posts': posts})
+    
+
+   

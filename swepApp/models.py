@@ -4,8 +4,8 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class Alimentos(models.Model):
-    nome = models.CharField(max_length=50)
-    valorNutri = models.CharField(max_length=50)
+    alimentos = models.TextField(max_length=50)
+    
 
 class UserSwep(AbstractUser):
     pass
