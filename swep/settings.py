@@ -25,9 +25,9 @@ SECRET_KEY = '$l3rqj$o132eb6truddviu$$%-(nhjl9f2okn@yn+xhs0$1hg='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'swepapp.herokuapp.com',
-    '127.0.0.1',
+ALLOWED_HOSTS = ['*'
+   # 'swepapp.herokuapp.com',
+    #'127.0.0.1',
 ]
 
 AUTH_USER_MODEL = 'swepApp.UserSwep'
