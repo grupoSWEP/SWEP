@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'swepApp',
+    'reset_migrations',
 ]
 
 MIDDLEWARE = [
