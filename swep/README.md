@@ -110,5 +110,3 @@ Through our project, users will get help in their daily lives as it aims to prom
 ## Who maintains and contributes to the project?
 
 At first, the project will be maintained by the team in collaboration with a professional nutritionist, responsible for indicating recipes with better nutritional balance. As the project develops, the collaboration will be expanded to receive contributions from other nutritionists and also from users, who will have space to insert their own recipe tips, with the proper division between professional and user recipes.
-
-CESAR School Computer Science students Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, Rodrigo Cavalcanti and Nathália Accioly are developing the application.
