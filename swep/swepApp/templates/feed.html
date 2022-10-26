@@ -14,14 +14,14 @@
 
           <style>
 
-          .feed {
-            clear: both;
-            background: rgba(204, 204, 204, 0.253);
-            width: 700px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto; 
-            margin: auto;
+        .feed {
+          clear: both;
+          background: rgba(204, 204, 204, 0.253);
+          width: 700px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto; 
+          margin: auto;
           }
 
         h2 {
@@ -32,40 +32,44 @@
          text-align: center;
         }
 
-          button {
-        display: inline-block;
-        text-align: center;
-        padding: 20px;
-        margin: 15px 20px;
-        font-size: 20px;
-        font-weight: 600;
+        button {
+          display: inline-block;
+          text-align: center;
+          padding: 20px;
+          margin: 15px 20px;
+          font-size: 20px;
+          font-weight: 600;
 
-        color:rgb(236, 240, 243);
+          color:rgb(236, 240, 243);
 
-        border-radius: 20px;
-        border: 1px solid rgb(94, 93, 93);
-        box-shadow: 3px 3px 3px rgb(80, 79, 82);
-        background-color: rgb(100, 99, 100);
-      }
+          border-radius: 20px;
+          border: 1px solid rgb(94, 93, 93);
+          box-shadow: 3px 3px 3px rgb(80, 79, 82);
+          background-color: rgb(100, 99, 100);
+        }
 
-    h3 {
-      display: flex;
-      justify-content: start;
+        .fa-solid fa-plus {
+          justify-content: start;
+        }
 
-      font-size: 20px;
-    }
+        h3 {
+          display: flex;
+          justify-content: start;
+          font-size: 20px;
+        }
 
-    h4 {
-        margin: 5px 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-radius: 20px;
-        border: 1px solid rgb(94, 93, 93);
-        box-shadow: 3px 3px 3px rgb(80, 79, 82);
-        background-color: rgba(179, 174, 179, 0.897);
+        h4 {
+          margin: 5px 10px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-radius: 20px;
+          border: 1px solid rgb(94, 93, 93);
+          box-shadow: 3px 3px 3px rgb(80, 79, 82);
+          background-color: rgba(179, 174, 179, 0.897);
 
-        text-decoration: none;
-        color: black;
+          text-decoration: none;
+          color: black;
+          text-decoration: underline;
     }
 
     </style>
@@ -77,8 +81,7 @@
     {% block 'content' %}
     <div class='feed'>
     </br></br>
-    <h1>Feed</h1></br>
-    <h2>Receitas de Usuários e Indicações de nutricionista</h2></br></br>
+    <h1>Feed</h1></br></br></br>
 
     <a href='#'><button class="bd">Publicações do Usuários</button></a>
     <a href='#' class="bd"><button>Publicações do Nutricionista</button></a></br></br></br></br>
@@ -86,7 +89,7 @@
     <div class = 'feedreceitas'> 
       {% for recipe in posts %}
         <h3>@{{recipe.author}}</h3>
-        <a href="#"><h4><i class="fa-solid fa-plus">{{recipe.titulo}}</i></h4></a></br></br></br>
+        <a href="recipe/{{recipe.id}}"><h4>{{recipe.titulo}}  <i class="fa-solid fa-plus"></i></h4></a></br></br>
       {% endfor %}
     {% endblock %}
     </div>
