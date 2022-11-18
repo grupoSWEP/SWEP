@@ -144,10 +144,12 @@ def LogoutView(request):
     logout(request)
     return redirect('index')
 
-def ShowRecipeView(request, id):
-    recipe = Recipe.objects.get(id=id)
+def ShowRecipeView(request, pk):
+    recipe = Recipe.objects.get(id=pk)
     context = { 'recipe':recipe }
     return render(request, 'showRecipe.html', context)
+
+
 @csrf_exempt
 def AlimentosView(request):
     if request.method=='POST':
@@ -158,8 +160,13 @@ def AlimentosView(request):
         
 
 def FeedView(request):
-    posts = Recipe.objects.all().order_by('-id')
-    return render(request, 'feed.html',  {'posts': posts})
-    
+    #posts = Recipe.objects.all().order_by('-id')
+    if request.GET.get('q') != None:
+        q = request.GET.get('q')
+    else:
+        q = ''
 
-   
+    regioes = ['Norte', 'Nordeste', 'Sul', 'Sudeste', 'Centro-Oeste']
+    posts = Recipe.objects.filter(regiao__contains=q)
+
+    return render(request, 'feed.html',  {'posts': posts, 'regioes': regioes})
