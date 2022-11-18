@@ -48,10 +48,6 @@
           background-color: rgb(100, 99, 100);
         }
 
-        .fa-solid fa-plus {
-          justify-content: start;
-        }
-
         h3 {
           display: flex;
           justify-content: start;
@@ -87,9 +83,14 @@
     <a href='#' class="bd"><button>Publicações do Nutricionista</button></a></br></br></br></br>
     
     <div class = 'feedreceitas'> 
+      <h3>Filtros:</h3>
+      <a href="{% url 'feed'%}">Todos <br></a>
+      {% for regiao in regioes %}
+      <a href="{% url 'feed'%}?q={{regiao}}">{{regiao}} <br></a>
+      {% endfor %}
       {% for recipe in posts %}
         <h3>@{{recipe.author}}</h3>
-        <a href="recipe/{{recipe.id}}"><h4>{{recipe.titulo}}  <i class="fa-solid fa-plus"></i></h4></a></br></br>
+        <a href="{% url 'Receita' recipe.id %}"><h4>{{recipe.titulo}} </h4></a></br></br>
       {% endfor %}
     {% endblock %}
     </div>

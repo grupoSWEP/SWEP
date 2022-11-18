@@ -13,7 +13,7 @@ urlpatterns = [
     path('login/', LoginView, name='login'),
     path('logout/', LogoutView, name='logout'),
     path('newRecipe/', NewRecipeView, name='novaReceita'),
-    path('recipe/<int:id>/', ShowRecipeView, name='Receita'),
+    path('feed/recipe/<int:pk>/', ShowRecipeView, name='Receita'),
     path('feed/', FeedView, name='feed'),
     path('alimentos/', AlimentosView, name='alimentospage')
 ]
