@@ -57,7 +57,7 @@ https://swepapp.herokuapp.com/
 
 ## Status do projeto
 
-Protótipo lofi aprovado com 7 histórias e a criação de uma 8ª e em andamento para deploy!
+Protótipo lofi aprovado com 9 histórias!
 
 ## O que o projeto faz?
 
