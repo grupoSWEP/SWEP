@@ -85,7 +85,7 @@ Por intermédio do nosso projeto os usuários terão ajuda no seu dia-a-dia ao p
 
 ## Quem mantém e contribui com o projeto?
 
-O projeto a princípio será mantido pela equipe em colaboração com uma profissional da área de nutrição, responsável pela indicação de receitas com maior equilíbrio nutricional. No decorrer do desenvolvimento, a colaboração será ampliada para receber contribuições de outros nutricionistas e também dos usuários que terão espaço para inserir suas próprias dicas de receitas, com a devida divisão entre receitas de profissionais e de usuários. No desenvolvimento da aplicação estão as estudantes de Ciência da Computação da CESAR School Letícia De Albuquerque, Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, Rodrigo Cavalcanti e Nathália Accioly.
+O projeto a princípio será mantido pela equipe em colaboração com uma profissional da área de nutrição, responsável pela indicação de receitas com maior equilíbrio nutricional. No decorrer do desenvolvimento, a colaboração será ampliada para receber contribuições de outros nutricionistas e também dos usuários que terão espaço para inserir suas próprias dicas de receitas, com a devida divisão entre receitas de profissionais e de usuários. No desenvolvimento da aplicação estão as estudantes de Ciência da Computação da CESAR School Luiza Omena, Maria Luiza Vasconcelos, Mariana Belo, Marília Santos, Rodrigo Cavalcanti e Nathália Accioly.
 
 # ENG version
 
