@@ -1,1 +1,1 @@
-web: gunicorn swep:app
+web: gunicorn swepapp:app
