@@ -1,1 +1,1 @@
-web gunicorn swep.wsgi:application --log-file -
+web gunicorn SWEP.wsgi:application --log-file -
