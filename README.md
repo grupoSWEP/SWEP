@@ -17,9 +17,17 @@ the SWEP application and it's aim to FDS subject.
 $ git clone https://github.com/grupoSWEP/SWEP.git && cd SWEP
 ```
 
+
+### **Entering the directory**
+
+> Here we are going to enter the swep paste.
+
+```
+$ cd swep
+```
 ### **Prepare Enviroment**
 
-> Here we should to make a Virtual Enviroment to run the API and installing Python and DRF libraries into this enviroment.
+> Here we should make a Virtual Enviroment to run the API and installing Python and DRF libraries into this enviroment.
 
 ```
 $ python3 -m venv venv
