@@ -97,7 +97,7 @@ Guiding question - 'How can we provide access to information for a better nutrit
 
 ## Project Status
 
-Lofi prototype approved with 7 user stories + a new add and in progress to deploy!
+Lofi prototype approved with 9 user stories!
 
 ## What does the project accomplish?
 
