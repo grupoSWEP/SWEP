@@ -70,6 +70,7 @@ class testRecipe(TestCase):
 
     def tearDown(self):
         self.recipe.delete()
+        self.user.delete()
 
     def testRightRecipe(self):
         self.assertEqual(self.recipe.titulo,'chocolate')
@@ -91,6 +92,7 @@ class testindicacao(TestCase):
 
     def tearDown(self):
         self.user.delete()
+        self.indicacoes.delete()
 
     def testRightIndicacao(self):
         self.assertEqual(self.indicacoes.description2,'indicacao')
