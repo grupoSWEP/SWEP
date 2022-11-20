@@ -1,0 +1,36 @@
+name: Deploy Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  heroku_git_deploy_job:
+    runs-on: ubuntu-latest
+    name: Git Deploy job- A job to deploy django app to heroku using git
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy django to heroku
+        uses: nyakaz73/heroku-django-deploy@v0.81 #Uses an action in the root directory
+        id: deploy
+        with:
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME_GIT }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_email_address: "los2@cesar.school"
+          working-directory: ./tests/djangoherokuapp
+          use_git: true
+          force_push: true
+          git_branch: main
+
+      #Use the output  from the hello step
+      - name: Get the output status
+        run: echo "${{ steps.deploy.outputs.status }}"
+      - name: Getting the files in directory
+        run: pwd
+
+      #Use the output  from the hello step
+      - name: Get the output status
+        run: echo "${{ steps.deploy.outputs.status }}"
