@@ -17,5 +17,6 @@ urlpatterns = [
     path('feed/', FeedView, name='feed'),
     path('alimentos/', AlimentosView, name='alimentospage'),
     path('profilePage/', ProfileView, name='Profile'),
+    path('feedIndicacoes/', FeedIndicacoesView, name='feedindicacoes'),
 
 ]
