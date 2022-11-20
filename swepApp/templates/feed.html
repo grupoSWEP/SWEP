@@ -90,8 +90,8 @@
       {% endfor %}
       {% for recipe in posts %}
         <h3>@{{recipe.author}}</h3>
-        <a href="{% url 'Receita' recipe.id %}"><h4>{{recipe.titulo}} </h4></a></br></br>
-        <button class="infomacoes">Mais informações...</button></a>
+        <h4>{{recipe.titulo}}</h4>
+        <div class=""><a href="{% url 'Receita' recipe.id %}"><h5> Mais informações... </h5></a></div>
       {% endfor %}
     {% endblock %}
     </div>
