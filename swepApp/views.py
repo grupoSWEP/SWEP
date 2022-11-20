@@ -170,6 +170,7 @@ def FeedView(request):
     posts = Recipe.objects.filter(regiao__contains=q)
 
     return render(request, 'feed.html',  {'posts': posts, 'regioes': regioes})
+
 def ProfileView(request):
     if UserSwep is Nutritionist:
         context = {
@@ -188,3 +189,7 @@ def ProfileView(request):
             }
         
     return render(request, 'profilePage.html', context)
+
+def FeedIndicacoesView(request):
+    indicacoes = Indicacoes.objects.all().order_by('-id')
+    return render(request, 'feedIndicacoes.html', {'indicacoes': indicacoes})
