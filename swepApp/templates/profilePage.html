@@ -1,0 +1,41 @@
+{% load static %}
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous">
+    <style>
+        body{
+            background-color: lemonchiffon;
+            text-align: center;
+        }
+
+    </style>
+  </head>
+  <body>
+    {%include 'navbar.html' %}
+    {%block content%}
+
+    {%if user.is_authenticated %}
+    <img src="{% static "swepApp/imagem.png" alt="logo SWEP"> %}"
+    <h3>Profile Page</h3>
+    <br>
+    <h2>{%block title%} Hi, {{user.username}} {%endblock %}</h2>
+    <br>
+    <h5><strong>Nome: </strong> {{user.first_name}}</h5>
+    <br>
+    <h5><strong>Sobrenome: </strong>{{user.last_name}}</h5>
+    <br>
+    <h5><strong>Username: </strong> {{user.username}}</h5>
+    <br>
+    <h5><strong>Email: </strong> {{user.email}}</h5>
+    {%else%}
+    <h2>Ill need to be logged in order to see your infos.</h2>
+    {% endif %}  
+    
+    {%endblock %}
+  </body>

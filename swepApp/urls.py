@@ -15,5 +15,7 @@ urlpatterns = [
     path('newRecipe/', NewRecipeView, name='novaReceita'),
     path('feed/recipe/<int:pk>/', ShowRecipeView, name='Receita'),
     path('feed/', FeedView, name='feed'),
-    path('alimentos/', AlimentosView, name='alimentospage')
+    path('alimentos/', AlimentosView, name='alimentospage'),
+    path('profilePage/', ProfileView, name='Profile'),
+
 ]

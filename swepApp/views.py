@@ -170,3 +170,21 @@ def FeedView(request):
     posts = Recipe.objects.filter(regiao__contains=q)
 
     return render(request, 'feed.html',  {'posts': posts, 'regioes': regioes})
+def ProfileView(request):
+    if UserSwep is Nutritionist:
+        context = {
+            'crn': Nutritionist.crn,
+            'first_name':Nutritionist.first_name,
+            'last_name':Nutritionist.last_name,
+        'username': Nutritionist.username,
+        'email': Nutritionist.email
+        }
+    else:
+        context = {
+            'first_name': RegularUser.first_name,
+            'last_name': RegularUser.last_name,
+            'username': RegularUser.username,
+            'email':RegularUser.email,        
+            }
+        
+    return render(request, 'profilePage.html', context)
