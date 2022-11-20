@@ -49,7 +49,7 @@ jobs:
           architecture: x64
           cache: "pip"
       - name: Deploy to Heroku
-        uses: grupoSWEP/SWEP
+        uses: grupoSWEP/SWEP@v2.38.0
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
