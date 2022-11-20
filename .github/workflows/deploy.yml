@@ -32,9 +32,6 @@ jobs:
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
-      - name: Rodar Testes Automáticos
-        run: |
-          pytest
 
   deploy:
     env:
