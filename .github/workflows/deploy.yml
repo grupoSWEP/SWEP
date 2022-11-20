@@ -32,10 +32,6 @@ jobs:
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
-      - name: Rodar flake8
-        uses: py-actions/flake8@v1
-        with:
-          flake8-version: "flake8_py3"
       - name: Rodar Testes Automáticos
         run: |
           pytest
