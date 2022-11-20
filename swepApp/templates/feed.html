@@ -77,10 +77,10 @@
     </br></br>
     <h1>Feed</h1></br></br></br>
 
-    <a href='#'><button class="bd">Publicações do Usuários</button></a>
-    <a href='#' class="bd"><button>Publicações do Nutricionista</button></a></br></br></br></br>
+    <a href="{% url 'feed'%}"><button class="bd">Publicações do Usuários</button></a>
+    <a href="{% url 'feedindicacoes'%}" class="bd"><button>Publicações do Nutricionista</button></a></br></br></br></br>
     
-    <div class = 'feedreceitas'> 
+    <div class = 'feedreceitas'>
       <h3>Filtros:</h3>
       <a href="{% url 'feed'%}">Todos <br></a>
       {% for regiao in regioes %}
