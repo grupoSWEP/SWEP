@@ -26,7 +26,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: 3.10.8
           architecture: x64
           cache: "pip"
       - name: Instalar dependências
@@ -45,11 +45,11 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: 3.10.8
           architecture: x64
           cache: "pip"
       - name: Deploy to Heroku
-        uses: grupoSWEP/SWEP@v2.38.0
+        uses: grupoSWEP/SWEP@v2.299.1
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
