@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy django to heroku
-        uses: grupoSWEP/SWEP #Uses an action in the root directory
+        uses: grupoSWEP/SWEP@v0.81 #Uses an action in the root directory
         id: deploy
         with:
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME_GIT }}
