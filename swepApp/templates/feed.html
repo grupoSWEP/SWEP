@@ -15,13 +15,15 @@
           <style>
 
         .feed {
+          width: 800px;
+          margin: 80px auto;
           clear: both;
+          color:rgba(13, 14, 13, 0.973);
+          padding: 0px 0px;
+
           background: rgba(204, 204, 204, 0.253);
-          width: 700px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto; 
-          margin: auto;
+          border-radius: 8px;
+          font-size: 20px;
           }
 
         h2 {
@@ -72,13 +74,16 @@
 
   <body>
 
+    {% load static %}
+
     {% block 'content' %}
-    <div class='feed'>
+    <div class='feed'><br><br>
+    <img src="{% static 'swepApp/imagem.png' alt='logo SWEP'%}">
     </br></br>
-    <h1>Feed</h1></br></br></br>
+    <h1>Feed do Usuário</h1></br></br></br>
 
     <a href="{% url 'feed'%}"><button class="bd">Publicações do Usuários</button></a>
-    <a href="{% url 'feedindicacoes'%}" class="bd"><button>Publicações dos Nutricionistas</button></a></br></br></br></br>
+    <a href="{% url 'feedindicacoes'%}" class="bd"><button>Publicações do Nutricionista</button></a></br></br></br></br>
     
     <div class = 'feedreceitas'>
       <h3>Filtros:</h3>
@@ -94,5 +99,3 @@
     {% endblock %}
     </div>
   </body>
-  
-</html>
