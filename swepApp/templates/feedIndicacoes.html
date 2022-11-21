@@ -15,13 +15,15 @@
           <style>
 
         .feedIndicacoes {
+          width: 800px;
+          margin: 80px auto;
           clear: both;
+          color:rgba(13, 14, 13, 0.973);
+          padding: 0px 0px;
+
           background: rgba(204, 204, 204, 0.253);
-          width: 700px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto; 
-          margin: auto;
+          border-radius: 8px;
+          font-size: 20px;
           }
 
         h2 {
@@ -77,10 +79,11 @@
   </head>
 
   <body>
+    {% load static %}
 
     {% block 'content' %}
-    <div class='feedIndicacoes'>
-    </br></br>
+    <div class='feedIndicacoes'></br></br>
+      <img src="{% static 'swepApp/imagem.png' alt='logo SWEP'%}">
     <h1>Feed de Indicações</h1></br></br></br>
 
     <a href="{% url 'feed'%}"><button class="bd">Publicações do Usuários</button></a>
