@@ -11,14 +11,14 @@ jobs:
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
       with:
-        python-version: [3.10.8]
+        python-version: 3.10.8
     - name: Install Dependencies
       run:
-        py -m pip install --upgrade pip
+        python -m pip install --upgrade pip
         pip install requirements.txt
     - name: Django Testing
       run:
-        py manage.py test
+        python3 manage.py test
       
     
 
