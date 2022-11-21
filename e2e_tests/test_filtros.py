@@ -51,13 +51,3 @@ class FiltroTestes(StaticLiveServerTestCase):
 
         certo4="http://127.0.0.1:8000/feed/?q=Norte"
         self.assertEquals(self.browser.current_url, certo4)
-
-    def test_filtro_nordeste(self):
-        nordeste = self.browser.find_element(By.XPATH, '/html/body/div/div/a[3]')
-        nordeste.click()
-        assert 'a' in self.browser.page_source
-
-    def test_filtro_norte(self):
-        Norte = self.browser.find_element(By.XPATH, '/html/body/div/div/a[2]')
-        Norte.click()
-        assert 'ss' in self.browser.page_source
