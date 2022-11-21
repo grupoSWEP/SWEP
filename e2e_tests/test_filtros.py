@@ -1,3 +1,4 @@
+'''
 from selenium import webdriver
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.webdriver.common.by import By
@@ -50,5 +51,5 @@ class FiltroTestes(StaticLiveServerTestCase):
 
         certo4="http://127.0.0.1:8000/feed/?q=Norte"
         self.assertEquals(self.browser.current_url, certo4)
-
+'''
     
