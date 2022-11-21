@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from swepApp.models import *
 
-driver = webdriver.Chrome()
 
 class FiltroTestes(StaticLiveServerTestCase):
     def setUp(self):
