@@ -24,3 +24,23 @@ class filtroTestes(StaticLiveServerTestCase):
 
         certo="http://127.0.0.1:8000/feed/?q=Nordeste"
         self.assertEquals(self.browser.current_url, certo)
+    def test_sul_url(self):
+        sul = self.browser.find_element(By.XPATH, '/html/body/div/div/a[4]')
+        sul.click()
+
+        certo2="http://127.0.0.1:8000/feed/?q=Sul"
+        self.assertEquals(self.browser.current_url, certo2)
+
+    def test_sudeste_url(self):
+        sudeste = self.browser.find_element(By.XPATH, '/html/body/div/div/a[5]')
+        sudeste.click()
+
+        certo3="http://127.0.0.1:8000/feed/?q=Sudeste"
+        self.assertEquals(self.browser.current_url, certo3)
+
+    def test_norte_url(self):
+        Norte = self.browser.find_element(By.XPATH, '/html/body/div/div/a[2]')
+        Norte.click()
+
+        certo4="http://127.0.0.1:8000/feed/?q=Norte"
+        self.assertEquals(self.browser.current_url, certo4)
