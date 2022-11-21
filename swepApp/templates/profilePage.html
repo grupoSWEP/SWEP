@@ -8,20 +8,35 @@
           rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
           crossorigin="anonymous">
+
+          {%include 'navbar.html' %}
+
     <style>
+      
         body{
-            background-color: lemonchiffon;
             text-align: center;
         }
 
+        .profile {
+            width: 800px;
+            margin: 80px auto;
+            clear: both;
+            color:rgba(13, 14, 13, 0.973);
+            padding: 0px 0px;
+
+            background: rgba(204, 204, 204, 0.253);
+            border-radius: 8px;
+            font-size: 20px;
+        }
     </style>
+
   </head>
   <body>
-    {%include 'navbar.html' %}
     {%block content%}
 
     {%if user.is_authenticated %}
-    <img src="{% static "swepApp/imagem.png" alt="logo SWEP"> %}"
+    <div class="profile">
+    <img src="{% static 'swepApp/imagem.png' alt='logo SWEP'%}"><br><br>
     <h3>Profile Page</h3>
     <br>
     <h2>{%block title%} Hi, {{user.username}} {%endblock %}</h2>
@@ -35,7 +50,8 @@
     <h5><strong>Email: </strong> {{user.email}}</h5>
     {%else%}
     <h2>Ill need to be logged in order to see your infos.</h2>
-    {% endif %}  
+    {% endif %} 
+    </div> 
     
     {%endblock %}
   </body>
